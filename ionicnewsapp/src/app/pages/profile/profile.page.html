@@ -5,12 +5,15 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>{{ user.name }}</ion-card-title>
-      <ion-card-subtitle>{{ user.email }}</ion-card-subtitle>
-    </ion-card-header>
-  </ion-card>
+  <div *ngIf="user">
+    <h2>Bem-vindo(a)!</h2>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>UID:</strong> {{ user.uid }}</p>
 
-  <ion-button expand="block" color="danger" (click)="logout()">Sair</ion-button>
+    <ion-button expand="block" color="danger" (click)="logout()">Sair</ion-button>
+  </div>
+
+  <div *ngIf="!user">
+    <p>Carregando informações do usuário...</p>
+  </div>
 </ion-content>

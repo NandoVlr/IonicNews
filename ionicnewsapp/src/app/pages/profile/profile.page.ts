@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Auth, signOut, User } from '@angular/fire/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 
 @Component({
   selector: 'app-profile',
@@ -11,15 +13,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage {
-  user: any = {
-    name: 'Usuário Demo',
-    email: 'usuario@email.com',
-  };
+  user: User | null = null;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private auth: Auth) {
+    onAuthStateChanged(this.auth, (user) => {
+      this.user = user;
+    });
+  }
 
-  logout() {
-    // Se estiver usando localStorage para login, limpe aqui
+  async logout() {
+    await signOut(this.auth);
     this.router.navigateByUrl('/login');
   }
 }
