@@ -20,7 +20,7 @@ O projeto tem como objetivo oferecer uma experiência de leitura de notícias pe
 
 
 ### Lista de Notícias
-![image-2](https://github.com/user-attachments/assets/ed3321d5-df46-4052-9763-5f83591be1de)
+![image-3](https://github.com/user-attachments/assets/89b5c944-55b4-4204-8bb7-1c8dcea63415)
 
 
 ### Detalhes da Notícia
