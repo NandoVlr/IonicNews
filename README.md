@@ -11,19 +11,25 @@ O projeto tem como objetivo oferecer uma experiência de leitura de notícias pe
 ## 📷 Imagens do Aplicativo
 
 ### Tela Inicial
-![Tela Inicial](ionicnewsapp\src\app\img\image-2.png)
+![image-2](https://github.com/user-attachments/assets/95907d7d-8fce-424e-8c05-564eac52fccd)
+
+
 
 ### Tela de Login
-![Tela de Login](ionicnewsapp\src\app\img\image-1.png)
+![image-1](https://github.com/user-attachments/assets/2e2f36e0-9c56-4d0a-87d4-881764610165)
+
 
 ### Lista de Notícias
-![Lista de Notícias](ionicnewsapp\src\app\img\image-3.png)
+![image-2](https://github.com/user-attachments/assets/ed3321d5-df46-4052-9763-5f83591be1de)
+
 
 ### Detalhes da Notícia
-![Detalhes da Notícia](ionicnewsapp\src\app\img\image-4.png)
+![image-4](https://github.com/user-attachments/assets/54d26ef9-f4f8-43a2-9e5c-48edcfc228b0)
+
 
 ### Favoritos
-![Favoritos](ionicnewsapp\src\app\img\image-5.png)
+![image-5](https://github.com/user-attachments/assets/f62978a6-96a4-44de-a141-ed7caefc9fef)
+
 
 ---
 
