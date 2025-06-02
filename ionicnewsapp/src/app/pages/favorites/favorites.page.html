@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="favorites.length > 0; else empty">
+    <ion-item *ngFor="let article of favorites" (click)="goToDetails(article)">
+      <ion-label>
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.source?.name }}</p>
+      </ion-label>
+      <ion-button
+        fill="clear"
+        slot="end"
+        color="danger"
+        (click)="removeFavorite(article); $event.stopPropagation()"
+      >
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #empty>
+    <ion-text color="medium">
+      <p class="ion-padding">Nenhum favorito salvo.</p>
+    </ion-text>
+  </ng-template>
+</ion-content>

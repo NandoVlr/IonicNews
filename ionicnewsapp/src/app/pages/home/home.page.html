@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>IonicNews</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label>Categoria</ion-label>
+    <ion-select [(ngModel)]="selectedCategory" (ionChange)="onCategoryChange()">
+      <ion-select-option *ngFor="let category of categories" [value]="category">
+        {{ category | titlecase }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-spinner *ngIf="isLoading" name="crescent" class="center-spinner"></ion-spinner>
+
+   <div *ngIf="!isLoading && articles.length === 0" class="empty-state">
+    <p>Nenhuma notícia encontrada para esta categoria.</p>
+  </div>
+
+  <ion-card *ngFor="let article of articles" (click)="goToDetails(article)">
+    <img *ngIf="article.urlToImage" [src]="article.urlToImage" alt="Imagem da notícia">
+    <ion-card-header>
+      
+      <ion-card-title><div class="card-title-row" (click)="goToDetails(article)">
+  <h2>{{ article.title }}</h2>
+  <ion-button
+    fill="clear"
+    size="small"
+    (click)="toggleFavorite(article); $event.stopPropagation()"
+  >
+    <ion-icon
+      [name]="isFavorite(article) ? 'heart' : 'heart-outline'"
+    ></ion-icon>
+  </ion-button>
+</div></ion-card-title>
+       
+    </ion-card-header>
+    <ion-card-content>
+      
+      <p>{{ article.description }}</p>
+      <ion-button fill="clear" size="small" expand="block" [href]="article.url" target="_blank">
+        Ler mais
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-text color="medium" *ngIf="!isLoading && articles.length === 0">
+    Nenhuma notícia encontrada.
+  </ion-text>
+
+</ion-content>
