@@ -39,7 +39,7 @@ O projeto tem como objetivo oferecer uma experiência de leitura de notícias pe
 - Ionic CLI (`npm install -g @ionic/cli`)
 - Angular CLI (`npm install -g @angular/cli`)
 - Conta gratuita na [NewsAPI](https://newsapi.org/)
-- Firebase (para autenticação e favoritos, se utilizado)
+- Firebase (para autenticação e favoritos)
 - Editor como VSCode
 
 
